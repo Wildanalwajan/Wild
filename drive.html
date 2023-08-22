@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {font-family: Arial, sans-serif;margin: 0;padding: 0;background-image: url(Kimi_No_Na_Wa.jpg);background-repeat: no-repeat;background-size: cover;color: #ffff;}
+    button {display: none;}
+    .link-list {justify-content: center;align-items: center;display: flex;background-color: rgba(0, 0, 0, 0.33) ;border-radius: 50px;}
+    .link-list li a {color: white;}
+    @media (max-width: 767px) {
+      body {background-image: url(Kimi_No_Nawap.jpg);background-repeat: inherit;background-size: cover;}
+      button {display: block;}
+      .link-list {display: none;background-color: #0000006a;border: 1px solid #ddd;top: 0px;z-index: 999;left: 15px;border-radius: 25px;}
+      .link-list li {margin-right: 1px;text-align: center;padding-top: 40px;}
+      .link-list a {color: white;}
+      .link-list.active {display: grid;}
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed-menu">
+    <button class="menu-button">Menu</button>
+    <div class="link-list">
+      <ul type="none">
+        <li><a href="../cerita1/indexsatu.html">Cerita 1</a></li>
+        <li><a href="../cerita2/indexdua.html">Cerita 2</a></li>
+        <li><a href="../cerita3/indextiga.html">Cerita 3</a></li>
+        <li><a href="../cerita4/indexempat.html">Cerita 4</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".menu-button").click(function() {$(".link-list").toggleClass("active");});
+    });
+  </script>
+</body>
+</html>
